@@ -65,4 +65,5 @@ This step involves the decryptor asking the victim for the key that was generate
 
 
 # REFERENCES
+- https://pythonassets.com/posts/detecting-changes-in-the-file-system-in-real-time-with-watchdog/
 
