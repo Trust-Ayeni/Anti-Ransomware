@@ -10,6 +10,33 @@ In a properly implemented cryptoviral extortion attack, recorvering the files wi
 
 `Ransomware` attacks are typically carried out using a **Trojan** disguised as a legitimate file that the user is tricked into downloading or opening when it arrives as an *email attachment*, or *embedded link in a phishing email*.
 
+## REQUIREMENTS
+
+🌟 Before we start, let's install the packages via pip by running in the terminal (Python3 Modules required to run the script):
+
+Example
+>- pip install watchdog
+
+:point_right: pandas
+
+:point_right: os
+
+:point_right: datetime
+
+:point_right: thread
+
+:point_right: queue
+
+:point_right: fernet
+
+:point_right: socket
+
+:point_right: path
+
+:point_right: tkinter
+
+:point_right: watchdog
+
 
 ## THE PROCESSES INVOLVED
 
@@ -63,10 +90,10 @@ This step involves the decryptor asking the victim for the key that was generate
 
 # STEPS EXPLANATION
 - **STEP 1:** 
-    >- :point_right:**Fetch files** to be encrypted from the specified drive (*In this case we specified a flash drive*).
+    >- :point_right: **Fetch files** to be encrypted from the specified drive (*In this case we specified a flash drive*).
     We'll use the os.walk() function from the os library, which, given a path, iterates over every possible path in the form of a tree, to get a list of the files         that need to be encrypted. 
-    >- :point_right:After that, we **used pandas to specify unique extentions**.
-    >- :point_right:**Obtain the drive's whole list of files along with their extensions**. To obtain a list of the files that require encryption, we'll use the os.walk() function from the os package, which, given a path, iterates through every potential path in the form of a tree. The following usage is described below:
+    >- :point_right: After that, we **used pandas to specify unique extentions**.
+    >- :point_right: **Obtain the drive's whole list of files along with their extensions**. To obtain a list of the files that require encryption, we'll use the os.walk() function from the os package, which, given a path, iterates through every potential path in the form of a tree. The following usage is described below:
     ```
     ListFiles = os.walk(str ('E:'))
     SplitTypes = []
@@ -76,7 +103,7 @@ This step involves the decryptor asking the victim for the key that was generate
     SplitTypes
     df = pd.DataFrame(SplitTypes, columns = ['extension_names'])
     ```
-    >- :point_right:**Encryption:** Data encryption and decryption are made possible by Python's support for a cryptography module. The cryptography package's fernet module has built-in functions for generating keys, converting plaintext to ciphertext, and recovering plaintext from ciphertext using the encrypt and decrypt methods, respectively. The fernet module ensures that information encrypted with it cannot be changed or decrypted without the key.
+    >- :point_right: **Encryption:** Data encryption and decryption are made possible by Python's support for a cryptography module. The cryptography package's fernet module has built-in functions for generating keys, converting plaintext to ciphertext, and recovering plaintext from ciphertext using the encrypt and decrypt methods, respectively. The fernet module ensures that information encrypted with it cannot be changed or decrypted without the key.
     ```
     def encrypt(key):
     while q.not_empty:
