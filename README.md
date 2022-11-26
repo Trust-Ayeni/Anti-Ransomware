@@ -13,7 +13,7 @@ In a properly implemented cryptoviral extortion attack, recorvering the files wi
 
 ## THE PROCESSES INVOLVED
 
-- Infecction: Attackers deliver the malware Payload to the target.
+- Infection: Attackers deliver the malware Payload to the target.
 
 - Security Key Exchange: Attackers are notified they have the victim.
 
