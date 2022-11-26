@@ -40,8 +40,6 @@ Examples are:
 >- WannaCry
 
 
-
-
 # PROJECT PLAN
 
 **PROJECT:** Ransomware to detect, decrypt and restore.
@@ -60,10 +58,21 @@ Signature > File hashes
 Step 3: Decryption and Recovery.
 This step involves the decryptor asking the victim for the key that was generated on their device/machine. Only the hacker will have this key, so they must retrieve it from him/her. 
 ```
-> Note: We know that there are libraries that uses the AES encryption with just a few function calls, but we are doing this manually.
+> Note: We know that there are libraries that uses the *AES* encryption with just a few function calls, but we are doing this manually.
+
+
+# STEPS EXPLANATION
+- **STEP 1:** 
+    >- server implementation
+    
+
+https://user-images.githubusercontent.com/96830808/204082422-19c79895-3753-4727-893c-dc171908b014.mp4
+
+
+
 
 
 
 # REFERENCES
 - https://pythonassets.com/posts/detecting-changes-in-the-file-system-in-real-time-with-watchdog/
-
+- 
