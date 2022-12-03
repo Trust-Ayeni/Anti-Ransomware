@@ -79,9 +79,10 @@ We will encrypt all files at a given directory and transmit the user's hostname 
 Step 2: Detection.
 Detection would work on identifying running malware processes. Other methods of detection includes:
 
-Honeypots > Monitored traps for a defender often used as a decoy to lure cyber attackers, to detect, deflect, and study hacking attempts to gain unauthorized access to information systems.
-ML >   Machine Learning
-Signature > File hashes
+>- Honeypots > Monitored traps for a defender often used as a decoy to lure cyber attackers, to detect, deflect, and study hacking attempts to gain unauthorized access to information systems.
+>- ML >   Machine Learning
+>- Signature > File Entrophy
+>- File Hash Comparism
 
 Step 3: Decryption and Recovery.
 This step involves the decryptor asking the victim for the key that was generated on their device/machine. Only the hacker will have this key, so they must retrieve it from him/her. 
@@ -91,6 +92,8 @@ This step involves the decryptor asking the victim for the key that was generate
 
 # STEPS EXPLANATION
 - **STEP 1:** 
+    
+    ## ENCRYPTION
     >- :point_right: **Fetch files** to be encrypted from the specified drive (*In this case we specified a flash drive*).
     We'll use the os.walk() function from the os library, which, given a path, iterates over every possible path in the form of a tree, to get a list of the files         that need to be encrypted. 
     >- :point_right: After that, we **used pandas to specify unique extentions**.
@@ -145,9 +148,79 @@ This step involves the decryptor asking the victim for the key that was generate
 
 https://user-images.githubusercontent.com/96830808/204082752-fe52e5bf-5c1b-491d-9a31-c94f005e7132.mp4
 
-- **STEP 2:** 
+- **STEP 2:**
+    
+    ## DETECTION
+    :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification, renaming, and deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
+    `WATCHDOG` is a cross-platform Python package that enables enables us to keep track of file system activity in real time. If we want the software to carry out an action whenever a file is edited, destroyed, relocated, etc., it is quite helpful for automating activities.
+ >- The code starts by importing the pathlib module.
+ >- This is a library that provides methods for manipulating paths and directories.
+ >- The Path class in this module can be used to create new paths, or it can be used as a context manager to ensure that changes made inside of it are not written outside of it.
+ >- The next line imports the ttk package which contains classes for creating graphical user interfaces with Tkinter .
+ >- Next, we import datetime , queue , and pygame .
+ >- These are all libraries that provide useful functions for working with dates and times, queues, and graphics respectively.
+ >- Next comes an empty function called MyEventHandler() which will serve as our event handler class.
+ It's important to note here that this class inherits from FileSystemEventHandler because file system events are what we're interested in handling at the moment.
+ We'll get into more detail about how these events work later on when we talk about how they're triggered using Python's built-in event loop mechanism (i.e., through callbacks).
+ For now though just know that FileSystemEventHandler is a base class provided by watchdog which handles most common file system events such as creation/deletion/modification/moved etc...
+ The code is a simple example of how to create an event handler in Python.
+ 
+ >- The first line creates the class MyEventHandler, which inherits from FileSystemEventHandler.
+ >- The next line initializes the instance of this class with q being the queue that was passed in when it was created.
+ >- The last two lines are self-explanatory and are not relevant for this tutorial.
+ >- The code starts by creating a class called Queue.
+ It then creates an instance of the class and assigns it to self._q, which is a reference to the queue.
+ >- The code then calls super().__init__() in order to call the parent's constructor for any objects that are inherited from this class.
+ >- The on_any_event function will be executed whenever there is an event with one of these names: Created, Deleted, Modified, or Moved.
+ >- In order to figure out what type of event has occurred, we use action = {EVENT_TYPE_CREATED: "Created", EVENT_TYPE_DELETED: "Deleted", EVENT_TYPE_MODIFIED: "Modified", EVENT_TYPE _MOVED: "Moved"}[event.eventType].
+ We can see that each key-value pair corresponds with one of these events types and contains information about what happened during that particular event (e.g., if you deleted something).
+ The code is a good example of how to use the `super()` function in Python.
+ The `super()` function allows us to call a method from our parent class without having to explicitly pass it as an argument.
+ >- The code starts by checking if the event is a movement.
+ If it is, then the destination path of that movement will be appended to action.
+ >- The code also checks if the event type is **EVENT_TYPE_MODIFIED** and plays music accordingly,  If it is an event type of MODIFIED, then pygame's mixer library will be initialized and music from ./alarm.mp3 will load into memory before playing through pygame's mixer library with the command play().
 
+ >- The code above will first check if there is an event that has been triggered.
+ If there is, it will then check what type of event it is and act accordingly.
+ >- The code starts by creating a new instance of the ProcessEvents class.
+ >- This is done with the following line: ProcessEvents(observer, q, modtree) The next line creates an event handler for when files are modified.
+ >- The code then sets up a loop that will run in the main thread and call process_events() every time it runs through it.
+ >- For each file that is changed, this function calls put() on the observer object to send information about what was changed and where it happened to another object called q .
+ >- Finally, datetime.datetime objects are created using strftime() , which formats them as human-readable dates and times.
+ The code is used to process events from the event queue.
+ The code above is executed in a secondary thread, so it cannot modify a Tk widget from the main thread.
+ The code starts by checking to see if the observer is still running.
+ If it isn't, then the code returns.
+ >- Next, the code tries to get an event from the queue.
+ >- If there is no event in the queue, then nothing happens and we just continue on with our program.
+ Otherwise, we will append a new item into our treeview at position 0 and set its text value to be whatever was retrieved from that event (new_item[0]).
+ >- The modtree object has a method called insert() which takes two parameters: 1) where in the treeview this new node should go 2) what type of data should be stored for this node 3) what values should be stored for each of those items
+ >- The code attempts to allow the observer to be updated with new events.
+ >- The code begins by checking if the observer is alive or not.
+ >- If it isn't, then there is nothing for the code to do.
+ >- If it is, then a try block will check if there are any events in the queue.
+ >- If there aren't any events in the queue, then this means that no new updates have occurred and so we continue on with our program as normal.
+ >- However, if an event was retrieved from the queue, then we'll insert it into a treeview at position 0 and append text=new_item[0] to its values property which contains whatever value of item was inserted into that particular spot in the treeview.
+ 
+ >- The code starts by creating a tk.Tk() object and configuring it to have a width of 600 pixels and height of 500 pixels.
+ >- Next, the code creates an empty columnconfigure(0, weight=1) for the first row in the grid layout.
+ The next line is where we create our Treeview widget with columns set up as "action", "time", which will display information about what happened on this computer when it was running this program.
+ The next line is where we create our modtree widget with heading("#0", text="File") so that it can be used later to show us what files were opened or closed during this time period.
+ Then there's another heading("action", text="Action") followed by another heading("time", text="Time").
+ Finally, there's a sticky="nsew" option for each column so that they stay put if you click them (sticky means they won't move).
+ The code is used to create a treeview with two columns and three rows.
+ The first column will contain the action, the second column will contain the time, and the third row will be empty.
+ The code above then creates an observer object that contains an event handler function called process_events() which is run every 500 milliseconds.
+ The code starts by creating an event observer.
+ The code then creates a queue that will act as a communication channel between the observer and the Tk application.
+ >- Next, it schedules two different handlers to be called when events occur on local drive C: OR E: (on Windows).
+ Then, it starts the event observer.
+ >- The first handler is MyEventHandler(q), which takes in one argument - q - which is the queue created earlier.
+ >- This function monitors all events on local drive C: OR E: (on Windows) and calls MyEventHandler(q), passing in "E:\" for its second argument if recursive=True; otherwise, it passes in "."
+ for its second argument if recursive=False
+ >- The code creates a new event observer, and schedules the MyEventHandler to be called every time an event occurs on the local drive C: OR E: (on Windows).
+ >- The code also schedules the MyEventHandler to be called when events occur on other drives.
 
 
 
