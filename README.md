@@ -1,5 +1,5 @@
 # Sentinel
-<img src="main.gif" align="right" />
+<img src="sentinel-shootas-blood-and-teef.gif" align="right" />
 
 **Ransomware** is a type of `cryptovirology` that threatens to publish the victims personal data or permanently block access unless a ransome is *paid*.
 
