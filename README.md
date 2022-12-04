@@ -228,6 +228,10 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
 
 
 
+# LIMITATIONS
+-
+-
+
 # REFERENCES
 - https://pythonassets.com/posts/detecting-changes-in-the-file-system-in-real-time-with-watchdog/
 - 
