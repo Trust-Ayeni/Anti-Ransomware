@@ -151,7 +151,7 @@ https://user-images.githubusercontent.com/96830808/204082752-fe52e5bf-5c1b-491d-
 - **STEP 2:**
     
     ## DETECTION
-    :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification, renaming, and deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
+    :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
     `WATCHDOG` is a cross-platform Python package that enables enables us to keep track of file system activity in real time. If we want the software to carry out an action whenever a file is edited, destroyed, relocated, etc., it is quite helpful for automating activities.
  >- The code starts by importing the pathlib module.
