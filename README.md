@@ -7,7 +7,7 @@
 
 **Cryptography** and it's applications are *defensive* in nature and provide privacy, authentication and security to users. Cryptovirology employs a twist on cryptography showing that it can be used *offensively*.
 
-In a properly implemented cryptoviral extortion attack, recorvering the files without the decryption key is an intractable problem and difficult to trace digital currencies such as `PaysafeCard` or `Bitcoin` and other cryptocurrencies are used for the ransoms, making tracing and prosecuting the perpetrators difficult.
+In a properly implemented cryptoviral extortion attack, recovering the files without the decryption key is an intractable problem and difficult to trace digital currencies such as `PaysafeCard` or `Bitcoin` and other cryptocurrencies are used for the ransoms, making tracing and prosecuting the perpetrators difficult.
 
 `Ransomware` attacks are typically carried out using a **Trojan** disguised as a legitimate file that the user is tricked into downloading or opening when it arrives as an *email attachment*, or *embedded link in a phishing email*.
 
@@ -39,7 +39,7 @@ Example
 :point_right: watchdog
 
 
-## THE PROCESSES INVOLVED
+## THE PROCESSES INVOLVED IN A RANSOMWARE ATTACK
 
 - Infection: Attackers deliver the malware Payload to the target.
 
@@ -77,7 +77,7 @@ To be able to detect, there has to be a running process, and an encrypted file/d
 We will encrypt all files at a given directory and transmit the user's hostname and random 512 bit key back to the malware server.
 
 Step 2: Detection.
-Detection would work on identifying running malware processes. Other methods of detection includes:
+Detection would work on identifying running malware processes based on file changes in the test machine. Other methods of detection includes:
 
 >- Honeypots > Monitored traps for a defender often used as a decoy to lure cyber attackers, to detect, deflect, and study hacking attempts to gain unauthorized access to information systems.
 >- ML >   Machine Learning
@@ -92,7 +92,6 @@ This step involves the decryptor asking the victim for the key that was generate
 
 # STEPS EXPLANATION
 - **STEP 1:** 
-    
     ## ENCRYPTION
     >- :point_right: **Fetch files** to be encrypted from the specified drive (*In this case we specified a flash drive*).
     We'll use the os.walk() function from the os library, which, given a path, iterates over every possible path in the form of a tree, to get a list of the files         that need to be encrypted. 
@@ -149,7 +148,6 @@ This step involves the decryptor asking the victim for the key that was generate
 https://user-images.githubusercontent.com/96830808/204082752-fe52e5bf-5c1b-491d-9a31-c94f005e7132.mp4
 
 - **STEP 2:**
-    
     ## DETECTION
     :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
