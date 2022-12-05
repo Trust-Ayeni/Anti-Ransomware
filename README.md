@@ -147,6 +147,15 @@ This step involves the decryptor asking the victim for the key that was generate
 
 https://user-images.githubusercontent.com/96830808/204082752-fe52e5bf-5c1b-491d-9a31-c94f005e7132.mp4
 
+
+
+
+
+https://user-images.githubusercontent.com/96830808/205639185-f08d8817-1551-45ba-9f47-7deb1f44bf81.mp4
+
+
+
+
 - **STEP 2:**
     ## DETECTION
     :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
