@@ -209,7 +209,16 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
 
 # LIMITATIONS
 - We did not discuss in details how the python script can be converted into exe as it is just a *proof of concept.*
-- Another way to detect is to simply use this script: **READ THE COMMENTS TO GUIDE YOU**
+- Another way to detect is to use this script: **READ THE COMMENTS TO GUIDE YOU**
+The script below is designed to detect and delete malware on a drive by computing the hashes of the files on the drive using a specified set of hash algorithms and comparing them against a pre-determined list of known malware hashes.
+
+The script begins by importing the necessary libraries, including the os module, which provides functions for interacting with the operating system, the hashlib module, which provides functions for computing hashes of files, and the shutil module, which provides functions for copying and deleting files.
+
+Next, the script sets the name of the drive to scan for malware and the list of hash algorithms to use for computing the hashes of the files on the drive. It then sets the path to the file containing the known malware hashes and reads these hashes into a list.
+
+The script then iterates over the files on the specified drive, computing the hashes of each file using the specified algorithms. It then checks if any of these hashes are present in the list of known malware hashes, and if so, deletes the file.
+
+Overall, this script uses a combination of file hashing and comparison against a known list of malware hashes to detect and delete malware on a drive.
 ```
 #Import the necessary libraries
 import os
@@ -240,7 +249,9 @@ for root, dirs, files in os.walk(drive_name):
 #The malwares on the drive have now been detected and deleted.
 ```
 - We could also have written a code to check for suspicious running processes and eliminate it once detected but it could be too late. 
->- **NOTE:** SENTINEL DETECTS BEFORE THE DAMAGE IS DONE
+- 
+
+>- **NOTE:** SENTINEL DETECTS BEFORE THE DAMAGE IS DONE, It is not also possible to determine the speed at which malware operates. Malware is a type of software that is designed to cause harm to a computer system, and the speed at which it operates can vary depending on a number of factors, including the type of malware and the specifications of the system it is running on. In general, the speed at which malware operates is not a meaningful metric, as its primary goal is to cause harm rather than to perform a specific task quickly.
 
 
 # REFERENCES
