@@ -208,8 +208,40 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
 
 
 # LIMITATIONS
--
--
+- We did not discuss in details how the python script can be converted into exe as it is just a *proof of concept.*
+- Another way to detect is to simply use this script: **READ THE COMMENTS TO GUIDE YOU**
+```
+#Import the necessary libraries
+import os
+import hashlib
+import shutil
+
+#Set the name of the drive and the list of hash algorithms to use
+drive_name = "E:"
+hash_algos = ["md5", "sha1", "sha256"]
+
+#Set the path to the directory containing the malware hashes
+hash_file_path = "./MD5 Hahses.txt"
+
+#Read the malware hashes from the file
+with open(hash_file_path, "r") as f:
+    malware_hashes = [line.strip() for line in f]
+
+#Iterate over the files on the drive
+for root, dirs, files in os.walk(drive_name):
+    for file in files:
+        # Compute the hashes of the file using the specified algorithms
+        file_path = os.path.join(root, file)
+    with open(file_path, "rb") as f:
+        file_hashes = [hashlib.new(algo, f.read()).hexdigest() for algo in hash_algos]
+        # If any of the file hashes are in the list of malware hashes, delete the file
+    if any(file_hash in malware_hashes for file_hash in file_hashes):
+        os.remove(file_path)
+#The malwares on the drive have now been detected and deleted.
+```
+- We could also have written a code to check for suspicious running processes and eliminate it once detected but it could be too late. 
+>- **NOTE:** SENTINEL DETECTS BEFORE THE DAMAGE IS DONE
+
 
 # REFERENCES
 - 
