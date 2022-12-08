@@ -159,15 +159,13 @@ https://user-images.githubusercontent.com/96830808/205639185-f08d8817-1551-45ba-
     ## DETECTION
     :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
-    `WATCHDOG` is a cross-platform Python package that enables enables us to keep track of file system activity in real time. If we want the software to carry out an action whenever a file is edited, destroyed, relocated, etc., it is quite helpful for automating activities.
- 
-This code is a script that monitors a file system for changes, and detects when new files matching a certain pattern (files with certain extensions) are created. When such a file is detected, it is added to a queue.
+   This code uses several libraries and modules to implement a ransomware detection tool. The code begins by importing several libraries, including Path, ttk, datetime, queue, tkinter, pygame, psutil, PrettyTable, and time from the Python Standard Library, as well as Observer, FileSystemEventHandler, and various event types from the watchdog library.
 
-The script uses the pathlib module to work with file paths, the tkinter module to create a graphical user interface (GUI), the datetime module to work with dates and times, the queue module for working with queues, the pygame module for playing audio files, and the watchdog module for monitoring the file system.
+Next, the code creates a list of file extensions called ransomware_dictionary that the tool will use to detect potentially malicious files. The list contains a large number of file extensions that are commonly associated with ransomware.
 
-The ransomware_dictionary variable is a list of file extensions that are commonly associated with ransomware. When a file with one of these extensions is detected, it is added to the queue.
+The code then defines a RansomwareEventHandler class that extends the FileSystemEventHandler class from the watchdog library. This class contains several methods that will be called whenever certain events occur on the file system, such as when a file is created, deleted, modified, or moved. These methods will be used to monitor the file system for changes that may indicate the presence of ransomware.
 
-The FileSystemEventHandler class from the watchdog.events module is used to create an event handler that will be called whenever a file is created, deleted, modified, or moved. The event handler checks the file's extension against the ransomware_dictionary list, and adds any matching files to the queue.
+Finally, the code creates an instance of the RansomwareEventHandler class and uses it to instantiate an Observer object, which will be used to monitor the file system for changes. The Observer object is then started, which will cause it to begin monitoring the file system and calling the appropriate methods from the RansomwareEventHandler class whenever it detects a relevant event.
 
 The script also contains code for creating a GUI using the tkinter module, and for playing an audio file using the pygame module.
 
