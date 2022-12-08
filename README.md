@@ -92,7 +92,7 @@ This step involves the decryptor asking the victim for the key that was generate
 
 # STEPS EXPLANATION
 - **STEP 1:** 
-    ## ENCRYPTION
+    ## ENCRYPTION <img src="hacked.png" align="left" />
     >- :point_right: **Fetch files** to be encrypted from the specified drive (*In this case we specified a flash drive*).
     We'll use the os.walk() function from the os library, which, given a path, iterates over every possible path in the form of a tree, to get a list of the files         that need to be encrypted. 
     >- :point_right: After that, we **used pandas to specify unique extentions**.
