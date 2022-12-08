@@ -179,12 +179,23 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
 - **STEP 3:**
     ## DECRYPTION AND RECOVERY
     >- :point_right: The decryptor's behavior is completely analogous to ransomware. Naturally, this decryptor is associated with the above mentioned ransomware. The code starts by creating a variable called key.
-    The code is a function called decrypt that takes in a key. The function begins a loop that continues until the q object is empty. Each iteration of the loop gets the next item from q and prints that it is being decrypted. It then attempts to open a file called 'thekey.key' and read its contents into a variable called secretkey.
+    
+   This code is a decryption program that decrypts files on a machine using the Fernet algorithm from the cryptography module. It prompts the user to enter a secret key, checks if the key is correct, and then starts decrypting the files on the machine.
 
-    If the user_phrase variable is equal to the secret_phrase variable, it then loops through a list of file paths stored in the file_paths variable. For each file, it attempts to open the file in binary mode, read its contents into a variable called contents, and then decrypt the contents using the Fernet class from the cryptography module, passing in secretkey as an argument. The decrypted contents are then written back to the file.
+First, the code imports the necessary modules. The os module is used to walk the file system and get the file names. The threading module is used to create a thread for the decryption process. The queue module is used to store the files in a queue for the thread to process. The pandas module is used to create a DataFrame to store the file extensions. The Fernet class from the cryptography.fernet module is used to encrypt and decrypt the files.
+
+Next, the code creates a queue to hold the files to be decrypted. It then walks the file system and gets the file names. It splits the file names by their extension and stores the extension names in a list. A DataFrame is created to store the extension names and the unique values are extracted from the DataFrame. The unique values are then used to create a list of file extensions to be encrypted.
+
+The code then loops through the files in the file system and checks if their extension is in the list of encrypted extensions. If it is, the file is added to a list of files to be decrypted.
+
+The decrypt() function is defined to decrypt the files. The function takes a secret key as input. It continues to process files in the queue until the queue is empty. For each file in the queue, it reads the encryption key from the thekey.key file, decrypts the file using the key, and writes the decrypted contents back to the file. If the file has admin privileges and cannot be decrypted, it skips the file.
+
+The code then prompts the user to enter a secret key. It checks if the key is correct and exits if the key is incorrect. It then adds the files to be decrypted to the queue.
+    For each file, it attempts to open the file in binary mode, read its contents into a variable called contents, and then decrypt the contents using the Fernet class from the cryptography module, passing in secretkey as an argument. The decrypted contents are then written back to the file.
 
     If any errors occur, such as if the files are not accessible due to admin privileges, a message is printed indicating that the decryption failed. After each iteration of the loop, the task_done() method of the q object is called. 
     The except clause skips any files with admin priviledges because they are skipped before anything else happens.
+    
     ```
     def decrypt(key):
     while q.not_empty:
