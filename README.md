@@ -150,14 +150,13 @@ https://user-images.githubusercontent.com/96830808/204082752-fe52e5bf-5c1b-491d-
 
 
 
-
 https://user-images.githubusercontent.com/96830808/205639185-f08d8817-1551-45ba-9f47-7deb1f44bf81.mp4
 
 
 
 - **STEP 2:**
     ## DETECTION
-    :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
+    >- :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
    This code uses several libraries and modules to implement a ransomware detection tool. The code begins by importing several libraries, including Path, ttk, datetime, queue, tkinter, pygame, psutil, PrettyTable, and time from the Python Standard Library, as well as Observer, FileSystemEventHandler, and various event types from the watchdog library.
 
@@ -176,7 +175,7 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
 
 - **STEP 3:**
     ## DECRYPTION AND RECOVERY
-    The decryptor's behavior is completely analogous to ransomware. Naturally, this decryptor is associated with the above mentioned ransomware. The code starts by creating a variable called key.
+    >- :point_right: The decryptor's behavior is completely analogous to ransomware. Naturally, this decryptor is associated with the above mentioned ransomware. The code starts by creating a variable called key.
     The code is a function called decrypt that takes in a key. The function begins a loop that continues until the q object is empty. Each iteration of the loop gets the next item from q and prints that it is being decrypted. It then attempts to open a file called 'thekey.key' and read its contents into a variable called secretkey.
 
     If the user_phrase variable is equal to the secret_phrase variable, it then loops through a list of file paths stored in the file_paths variable. For each file, it attempts to open the file in binary mode, read its contents into a variable called contents, and then decrypt the contents using the Fernet class from the cryptography module, passing in secretkey as an argument. The decrypted contents are then written back to the file.
