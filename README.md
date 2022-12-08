@@ -191,11 +191,13 @@ The code then loops through the files in the file system and checks if their ext
 The decrypt() function is defined to decrypt the files. The function takes a secret key as input. It continues to process files in the queue until the queue is empty. For each file in the queue, it reads the encryption key from the thekey.key file, decrypts the file using the key, and writes the decrypted contents back to the file. If the file has admin privileges and cannot be decrypted, it skips the file.
 
 The code then prompts the user to enter a secret key. It checks if the key is correct and exits if the key is incorrect. It then adds the files to be decrypted to the queue.
-    For each file, it attempts to open the file in binary mode, read its contents into a variable called contents, and then decrypt the contents using the Fernet class from the cryptography module, passing in secretkey as an argument. The decrypted contents are then written back to the file.
-
-    If any errors occur, such as if the files are not accessible due to admin privileges, a message is printed indicating that the decryption failed. After each iteration of the loop, the task_done() method of the q object is called. 
-    The except clause skips any files with admin priviledges because they are skipped before anything else happens.
     
+For each file, it attempts to open the file in binary mode, read its contents into a variable called contents, and then decrypt the contents using the Fernet class from the cryptography module, passing in secretkey as an argument. The decrypted contents are then written back to the file.
+
+If any errors occur, such as if the files are not accessible due to admin privileges, a message is printed indicating that the decryption failed. After each iteration of the loop, the task_done() method of the q object is called. 
+
+The except clause skips any files with admin priviledges because they are skipped before anything else happens.
+ 
     ```
     def decrypt(key):
     while q.not_empty:
