@@ -262,6 +262,7 @@ for root, dirs, files in os.walk(drive_name):
 #The malwares on the drive have now been detected and deleted.
 ```
 - We could also have written a code to check for suspicious running processes and eliminate it once detected but it could be too late. 
+- Tboy and I could also include deleting suspicious processess when detected.
 
 >- **NOTE:** SENTINEL DETECTS BEFORE THE DAMAGE IS DONE, It is not also possible to determine the speed at which malware operates. Malware is a type of software that is designed to cause harm to a computer system, and the speed at which it operates can vary depending on a number of factors, including the type of malware and the specifications of the system it is running on. In general, the speed at which malware operates is not a meaningful metric, as its primary goal is to cause harm rather than to perform a specific task quickly.
 
