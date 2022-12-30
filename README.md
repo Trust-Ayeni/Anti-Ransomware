@@ -161,16 +161,13 @@ https://user-images.githubusercontent.com/96830808/205639185-f08d8817-1551-45ba-
     ## DETECTION
     >- :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
-   This code uses several libraries and modules to implement a ransomware detection tool. The code begins by importing several libraries, including Path, ttk, datetime, queue, tkinter, pygame, psutil, PrettyTable, and time from the Python Standard Library, as well as Observer, FileSystemEventHandler, and various event types from the watchdog library.
+This is a script that appears to implement a file system event handler to detect changes to files in a given directory. It uses the watchdog library to monitor the file system and the prettytable library to create tables to display information about the detected events. It also has a list of file extensions that it considers to be associated with ransomware, which it uses to filter the events it processes.
 
-Next, the code creates a list of file extensions called ransomware_dictionary that the tool will use to detect potentially malicious files. The list contains a large number of file extensions that are commonly associated with ransomware.
+The script sets up an event handler class that inherits from FileSystemEventHandler, and overrides the on_any_event method to handle all types of events. It also defines several other methods to handle specific types of events: on_created, on_deleted, on_modified, and on_moved.
 
-The code then defines a RansomwareEventHandler class that extends the FileSystemEventHandler class from the watchdog library. This class contains several methods that will be called whenever certain events occur on the file system, such as when a file is created, deleted, modified, or moved. These methods will be used to monitor the file system for changes that may indicate the presence of ransomware.
+The script also uses tkinter to create a GUI application with a tree view to display the detected events, a pygame mixer to play a sound when an event is detected, and the psutil library to display information about the system's CPU and memory usage. It also uses the queue module to communicate between the event handler and the GUI.
 
-Finally, the code creates an instance of the RansomwareEventHandler class and uses it to instantiate an Observer object, which will be used to monitor the file system for changes. The Observer object is then started, which will cause it to begin monitoring the file system and calling the appropriate methods from the RansomwareEventHandler class whenever it detects a relevant event.
-
-The script also contains code for creating a GUI using the tkinter module, and for playing an audio file using the pygame module.
-
+Finally, the script sets up an observer using the Observer class from the watchdog library, and starts the observer to begin monitoring the file system for changes.
 
 
 https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-bb07-3a758b7fb36e.mp4
