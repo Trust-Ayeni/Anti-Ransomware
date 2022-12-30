@@ -271,5 +271,5 @@ for root, dirs, files in os.walk(drive_name):
 >- **NOTE:** SENTINEL DETECTS AND ALERTS BEFORE THE DAMAGE IS DONE, It is not also possible to determine the speed at which malware operates. Malware is a type of software that is designed to cause harm to a computer system, and the speed at which it operates can vary depending on a number of factors, including the type of malware and the specifications of the system it is running on. In general, the speed at which malware operates is not a meaningful metric, as its primary goal is to cause harm rather than to perform a specific task quickly.
 
 # REFERENCES
-- [network chuck](https://github.com/atknfe/malware-networkchuck)
+- [network chuck](https://networkchuck.com/i-created-malware-with-python-its-scary-easy/)
 - [wiki](https://en.wikipedia.org/wiki/Ransomware)
