@@ -221,7 +221,7 @@ The except clause skips any files with admin priviledges because they are skippe
 
 
 # LIMITATIONS
-- We did not discuss in details how the python script can be converted into exe as it is just a *proof of concept.*
+- We did not disclose in details how the python script can be converted into exe as it is just a *proof of concept.*
 - Another way to detect is to use this script: **READ THE COMMENTS TO GUIDE YOU**
 The script below is designed to detect and delete malware on a drive by computing the hashes of the files on the drive using a specified set of hash algorithms and comparing them against a pre-determined list of known malware hashes.
 
@@ -262,10 +262,9 @@ for root, dirs, files in os.walk(drive_name):
 #The malwares on the drive have now been detected and deleted.
 ```
 - We could also have written a code to check for suspicious running processes and eliminate it once detected but it could be too late. 
-- Tboy and I could also include terminating suspicious processess when detected.
+- Tboy and I could have also included terminating suspicious processess when detected.
 
 >- **NOTE:** SENTINEL DETECTS BEFORE THE DAMAGE IS DONE, It is not also possible to determine the speed at which malware operates. Malware is a type of software that is designed to cause harm to a computer system, and the speed at which it operates can vary depending on a number of factors, including the type of malware and the specifications of the system it is running on. In general, the speed at which malware operates is not a meaningful metric, as its primary goal is to cause harm rather than to perform a specific task quickly.
-
 
 # REFERENCES
 - [network chuck](https://github.com/atknfe/malware-networkchuck)
