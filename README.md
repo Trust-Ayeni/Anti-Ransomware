@@ -161,7 +161,7 @@ https://user-images.githubusercontent.com/96830808/205639185-f08d8817-1551-45ba-
     ## DETECTION
     >- :point_right: For detection, `Watchdog` — a software that keeps track of all file creation, modification (ENCRYPTION), renaming, deletion in a certain path—has been developed. Two of these features—file modification and renaming—will be used by us.
 
-This is a script that appears to implement a file system event handler to detect changes to files in a given directory. It uses the watchdog library to monitor the file system and the prettytable library to create tables to display information about the detected events. It also has a list of file extensions that it considers to be associated with ransomware, which it uses to filter the events it processes.
+The detection folder contains a script that implements a file system event handler to detect changes to files in a given directory. It uses the watchdog library to monitor the file system and the prettytable library to create tables to display information about the detected events. It also has a list of file extensions that it considers to be associated with ransomware, which it uses to filter the events it processes.
 
 The script sets up an event handler class that inherits from FileSystemEventHandler, and overrides the on_any_event method to handle all types of events. It also defines several other methods to handle specific types of events: on_created, on_deleted, on_modified, and on_moved.
 
@@ -177,7 +177,7 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
     ## DECRYPTION AND RECOVERY
     >- :point_right: The decryptor's behavior is completely analogous to ransomware. Naturally, this decryptor is associated with the above mentioned ransomware. The code starts by creating a variable called key.
     
-   This code is a decryption program that decrypts files on a machine using the Fernet algorithm from the cryptography module. It prompts the user to enter a secret key, checks if the key is correct, and then starts decrypting the files on the machine.
+   This folder contains a decryption program that decrypts files on a machine using the Fernet algorithm from the cryptography module. It prompts the user to enter a secret key, checks if the key is correct, and then starts decrypting the files on the machine.
 
 First, the code imports the necessary modules. The os module is used to walk the file system and get the file names. The threading module is used to create a thread for the decryption process. The queue module is used to store the files in a queue for the thread to process. The pandas module is used to create a DataFrame to store the file extensions. The Fernet class from the cryptography.fernet module is used to encrypt and decrypt the files.
 
@@ -222,13 +222,13 @@ The except clause skips any files with admin priviledges because they are skippe
 - Another way to detect is to use this script: **READ THE COMMENTS TO GUIDE YOU**
 The script below is designed to detect and delete malware on a drive by computing the hashes of the files on the drive using a specified set of hash algorithms and comparing them against a pre-determined list of known malware hashes.
 
-The script begins by importing the necessary libraries, including the os module, which provides functions for interacting with the operating system, the hashlib module, which provides functions for computing hashes of files, and the shutil module, which provides functions for copying and deleting files.
+    The script begins by importing the necessary libraries, including the os module, which provides functions for interacting with the operating system, the hashlib module, which provides functions for computing hashes of files, and the shutil module, which provides functions for copying and deleting files.
 
-Next, the script sets the name of the drive to scan for malware and the list of hash algorithms to use for computing the hashes of the files on the drive. It then sets the path to the file containing the known malware hashes and reads these hashes into a list.
+    Next, the script sets the name of the drive to scan for malware and the list of hash algorithms to use for computing the hashes of the files on the drive. It then sets the path to the file containing the known malware hashes and reads these hashes into a list.
 
-The script then iterates over the files on the specified drive, computing the hashes of each file using the specified algorithms. It then checks if any of these hashes are present in the list of known malware hashes, and if so, deletes the file.
+    The script then iterates over the files on the specified drive, computing the hashes of each file using the specified algorithms. It then checks if any of these hashes are present in the list of known malware hashes, and if so, deletes the file.
 
-Overall, this script uses a combination of file hashing and comparison against a known list of malware hashes to detect and delete malware on a drive.
+    Overall, this script uses a combination of file hashing and comparison against a known list of malware hashes to detect and delete malware on a drive.
 ```
 #Import the necessary libraries
 import os
@@ -261,7 +261,7 @@ for root, dirs, files in os.walk(drive_name):
 - We could also have written a code to check for suspicious running processes and eliminate it once detected but it could be too late. 
 - Tboy and I could have also included terminating suspicious processess when detected.
 
->- **NOTE:** SENTINEL DETECTS BEFORE THE DAMAGE IS DONE, It is not also possible to determine the speed at which malware operates. Malware is a type of software that is designed to cause harm to a computer system, and the speed at which it operates can vary depending on a number of factors, including the type of malware and the specifications of the system it is running on. In general, the speed at which malware operates is not a meaningful metric, as its primary goal is to cause harm rather than to perform a specific task quickly.
+>- **NOTE:** SENTINEL DETECTS AND ALERTS BEFORE THE DAMAGE IS DONE, It is not also possible to determine the speed at which malware operates. Malware is a type of software that is designed to cause harm to a computer system, and the speed at which it operates can vary depending on a number of factors, including the type of malware and the specifications of the system it is running on. In general, the speed at which malware operates is not a meaningful metric, as its primary goal is to cause harm rather than to perform a specific task quickly.
 
 # REFERENCES
 - [network chuck](https://github.com/atknfe/malware-networkchuck)
