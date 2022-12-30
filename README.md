@@ -15,9 +15,6 @@ In a properly implemented cryptoviral extortion attack, recovering the files wit
 
 🌟 Before we start, let's install the packages via pip by running in the terminal (Python3 Modules required to run the script):
 
-Example
->- pip install watchdog
-
 :point_right: pandas
 
 :point_right: os
@@ -38,7 +35,17 @@ Example
 
 :point_right: watchdog
 
+:point_right: PrettyTable
+ 
+:point_right: psutil
 
+:point_right: pygame
+
+:point_right: pathlib
+```
+Example
+pip install watchdog
+```
 ## THE PROCESSES INVOLVED IN A RANSOMWARE ATTACK
 
 - Infection: Attackers deliver the malware Payload to the target.
@@ -195,7 +202,7 @@ If any errors occur, such as if the files are not accessible due to admin privil
 
 The except clause skips any files with admin priviledges because they are skipped before anything else happens.
  
-    ```
+```
     def decrypt(key):
     while q.not_empty:
         file = q.get()
@@ -214,7 +221,7 @@ The except clause skips any files with admin priviledges because they are skippe
         except: # files with admin priviledges are skipped
             print('DECRYPTION FAILED')
         q.task_done()
-    ```
+ ```
 
 
 # LIMITATIONS
