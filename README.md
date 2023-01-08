@@ -179,6 +179,11 @@ Finally, the script sets up an observer using the Observer class from the watchd
 
 https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-bb07-3a758b7fb36e.mp4
 
+ 
+ ### Pseudocode
+
+
+ ### Algorithm
 
 - **STEP 3:**
     ## DECRYPTION AND RECOVERY
