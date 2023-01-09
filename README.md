@@ -228,7 +228,6 @@ The except clause skips any files with admin priviledges because they are skippe
         q.task_done()
  ```
 
-
 # LIMITATIONS
 - We did not disclose in details how the python script can be converted into exe as it is just a *proof of concept.*
 - Another way to detect is to use this script: **READ THE COMMENTS TO GUIDE YOU**
