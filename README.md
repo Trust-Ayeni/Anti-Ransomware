@@ -61,10 +61,13 @@ We will encrypt all files at a given directory and transmit the user's hostname 
 Step 2: Detection.
 Detection would work on identifying running malware processes based on file changes in the test machine. Other methods of detection includes:
 
->- Honeypots > Monitored traps for a defender often used as a decoy to lure cyber attackers, to detect, deflect, and study hacking attempts to gain unauthorized access to information systems.
->- ML >   Machine Learning
->- Signature > File Entrophy
->- File Hash Comparism
+Honeypots > Monitored traps for a defender often used as a decoy to lure cyber attackers, to detect, deflect, and study hacking attempts to gain unauthorized access to information systems.
+
+ML >   Machine Learning
+
+Signature > File Entrophy
+
+File Hash Comparism
 
 Step 3: Decryption and Recovery.
 This step involves the decryptor asking the victim for the key that was generated on their device/machine. Only the hacker will have this key, so they must retrieve it from him/her. 
