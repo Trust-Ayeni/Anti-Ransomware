@@ -15,33 +15,8 @@ In a properly implemented cryptoviral extortion attack, recovering the files wit
 
 🌟 Before we start, let's install the packages via pip by running in the terminal (Python3 Modules required to run the script):
 
-:point_right: pandas
-
-:point_right: os
-
-:point_right: datetime
-
-:point_right: thread
-
-:point_right: queue
-
-:point_right: fernet
-
-:point_right: socket
-
-:point_right: path
-
-:point_right: tkinter
-
-:point_right: watchdog
-
-:point_right: PrettyTable
- 
-:point_right: psutil
-
-:point_right: pygame
-
-:point_right: pathlib
+:point_right: pandas :point_right: os :point_right: datetime :point_right: thread :point_right: queue :point_right: fernet :point_right: socket :point_right: path :point_right: tkinter :point_right: watchdog :point_right: PrettyTable :point_right: psutil :point_right: pygame :point_right: pathlib :point_right: pefile :point_right: sys :point_right: pickle
+:point_right: seaborn
 ```
 Example
 pip install watchdog
