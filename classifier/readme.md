@@ -1,1 +1,1 @@
-This folder contains the models features used to train the data for prediction whether files on drive are malicious OR not.
+>- :point_right: This folder contains the models features (saved in pickle format) collected from the trained data for prediction whether files on drive are malicious OR not.
