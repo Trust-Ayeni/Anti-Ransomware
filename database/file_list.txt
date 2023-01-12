@@ -1,0 +1,32 @@
+E://alx.jpg
+E://anim.gif
+E://bana.png
+E://Boy-img.png
+E://C++.jpg
+E://c-logo-icon-28389.png
+E://Cert.jpg
+E://Code.svg
+E://MY PROJECT final year.docx
+E://NYSC Acceptance Letter - Ayeni.pdf
+E://ppa_Letter[1].pdf
+E://relocation trust.pdf
+E://relocation_Letter gift.pdf
+E://SlackSetup.exe
+E://text font.ttf
+E://apps\4kvideodownloader_4.22.2_x64_online.exe
+E://apps\cheat-engine-6-7.exe
+E://apps\filmora_setup_full846.exe
+E://apps\IQOption_v2737_1782FB.msi
+E://apps\python-3.5.3-amd64.exe
+E://apps\python-3.8.0-amd64.exe
+E://apps\pywin32-219.win-amd64-py3.5.exe
+E://apps\uTorrent Pro 3.5.5 Build 46206 Multilingual [FileCR].zip
+E://apps\VMware-workstation-full-16.2.4-20089737.exe
+E://files\NYSC Acceptance Letter - Ayeni.pdf
+E://files\nysc_acceptance_letter_-_ayeni_t.pdf
+E://files\orejah ppa.pdf
+E://files\Orejah_January's_Clearance.pdf
+E://files\ppa_letter-1.pdf
+E://files\relocation trust.pdf
+E://files\relocation_Letter gift.pdf
+E://files\Trust_January's_Clearance.pdf
