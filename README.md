@@ -15,8 +15,6 @@ In a properly implemented cryptoviral extortion attack, recovering the files wit
 
 🌟 Before we start, let's install the packages via pip by running in the terminal (Python3 Modules required to run the script):
 
-Example
-
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=consolas&color=%234DF79A&height=30&lines=pip+install+pandas;pip+install+os;pip+install+datetime;pip+install+thread;pip+install+queue;pip+install+fernet;pip+install+socket;pip+install+path;pip+install+tkinter;pip+install+watchdog;pip+install+PrettyTable;pip+install+psutil;pip+install+pygame;pip+install+pathlib;pip+install+pefile;pip+install+sys;pip+install+pickle;pip+install+seaborn,+Linux(Debian)+framework)](https://git.io/typing-svg)
 
 
