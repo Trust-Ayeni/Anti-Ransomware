@@ -15,12 +15,12 @@ In a properly implemented cryptoviral extortion attack, recovering the files wit
 
 🌟 Before we start, let's install the packages via pip by running in the terminal (Python3 Modules required to run the script):
 
-:point_right: pandas :point_right: os :point_right: datetime :point_right: thread :point_right: queue :point_right: fernet :point_right: socket :point_right: path :point_right: tkinter :point_right: watchdog :point_right: PrettyTable :point_right: psutil :point_right: pygame :point_right: pathlib :point_right: pefile :point_right: sys :point_right: pickle
-:point_right: seaborn
-```
 Example
-pip install watchdog
-```
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=consolas&color=%234DF79A&height=30&lines=pip+install+pandas;pip+install+os;pip+install+datetime;pip+install+thread;pip+install+queue;pip+install+fernet;pip+install+socket;pip+install+path;pip+install+tkinter;pip+install+watchdog;pip+install+PrettyTable;pip+install+psutil;pip+install+pygame;pip+install+pathlib;pip+install+pefile;pip+install+sys;pip+install+pickle;pip+install+seaborn,+Linux(Debian)+framework)](https://git.io/typing-svg)
+
+
+
 ## THE PROCESSES INVOLVED IN A RANSOMWARE ATTACK
 
 - Infection: Attackers deliver the malware Payload to the target.
