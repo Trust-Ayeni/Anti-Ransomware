@@ -254,5 +254,5 @@ for root, dirs, files in os.walk(drive_name):
 - [network chuck](https://networkchuck.com/i-created-malware-with-python-its-scary-easy/)
 - [wiki](https://en.wikipedia.org/wiki/Ransomware)
 
-To add ML realtime detec
+
 Explain Ml process.
