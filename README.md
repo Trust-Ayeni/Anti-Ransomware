@@ -155,11 +155,35 @@ Finally, the script sets up an observer using the Observer class from the watchd
 
 https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-bb07-3a758b7fb36e.mp4
 
+
+ ### ML Algorithm
+ >-Import necessary libraries
+
+ >-Read a csv file named 'data.csv' and store it in a variable named 'data'.
  
- ### Pseudocode
+ >-Create a variable 'X' which is the data without the columns 'Name', 'md5', 'legitimate'. Create a variable 'y' which is the column 'legitimate' from the data.
+ 
+ >-Print the total number of features in X.
+ 
+ >-Select the most important features using the ExtraTreesClassifier. Use the SelectFromModel method to get the new features.
+ 
+ >-Split the dataset into training and test sets, using the train_test_split method.
+ 
+ >-Print the number of features identified as important.
+ 
+ >-Sort the feature importances in descending order and print the name and importance of each feature.
+ 
+ >-Train and evaluate different machine learning algorithms: DecisionTree, RandomForest1, RandomForest2, RandomForest3, RandomForest4, GradientBoosting, AdaBoost1, AdaBoost2, bdt_real, bdt_discrete, GNB, KNN1, KNN2, and others.
+ 
+ >-Print the results of the trained algorithms.
+ 
+ ```
+ The main goal of this algorithm is to train and evaluate multiple machine learning algorithms on a dataset read from a csv file. 
+ It first selects the most important features using the ExtraTreesClassifier and then splits the dataset into training and test sets. 
+ It then trains and evaluates different machine learning algorithms and prints the results.
+ The best alogrithm is chosen for the prediction of files in the drive to be classified as malicious/legitimate.
+ ```
 
-
- ### Algorithm
 
 - **STEP 3:**
     ## DECRYPTION AND RECOVERY
@@ -253,6 +277,3 @@ for root, dirs, files in os.walk(drive_name):
 # REFERENCES
 - [network chuck](https://networkchuck.com/i-created-malware-with-python-its-scary-easy/)
 - [wiki](https://en.wikipedia.org/wiki/Ransomware)
-
-
-Explain Ml process.
