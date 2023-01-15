@@ -156,7 +156,7 @@ Finally, the script sets up an observer using the Observer class from the watchd
 https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-bb07-3a758b7fb36e.mp4
 
 
- ### ML Algorithm
+ ### ML Trainer Algorithm
  >-Import necessary libraries
 
  >-Read a csv file named 'data.csv' and store it in a variable named 'data'.
@@ -184,6 +184,25 @@ https://user-images.githubusercontent.com/96830808/205476537-2ed8a910-90c0-4e65-
  The best alogrithm is chosen for the prediction of files in the drive to be classified as malicious/legitimate.
  ```
 
+### ML Detector Algorithm
+This code is a script for extracting information from a Portable Executable (PE) file, which is a type of file format used in Windows executable files.
+
+The script makes use of the pefile library to parse the PE file and extract information from it. The script is divided into several functions:
+
+>-get_entropy(data): this function calculates the entropy of a given file, by counting the number of occurrences of each byte in the file and using that to calculate the entropy using the formula -p(x) * log(p(x)).
+
+>-get_resources(pe): this function extracts the resources from the PE file and returns a list of lists, where each list contains the entropy and size of a resource.
+
+>-get_version_info(pe): this function extracts version information from the PE file and returns it as a dictionary.
+
+>-extract_infos(fpath): this function takes the file path of a PE file as input and calls the above functions to extract various information about the file and returns it as a dictionary.
+
+```
+The script uses pefile library which is a Python library for working with Portable Executable (PE) files. 
+It reads and writes the PE headers, sections, and directories, and can also extract data from PE resources. 
+The script use pefile to open a PE file and extract various information from it such as the machine type, size of the optional header, characteristics, linker version, code and data size, entry point, image base, section and file alignment, operating system version, and version information. 
+The script also extracts resources from the PE file and calculates the entropy of each resource.
+```
 
 - **STEP 3:**
     ## DECRYPTION AND RECOVERY
